@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* Background */
+  background: url("./images/bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.page_1 {
+  flex: 1;                     /* pushes footer to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical center */
+  align-items: center;         /* horizontal center */
+  text-align: center;
+
+  /* Entry animation */
+  animation: fadeUp 0.6s ease forwards;
+}
+.page_1 h1 {
+  font-size: 3rem;
+  margin-bottom: 6px;          /* controls space below h1 */
+}
+.page_1 h2 {
+  margin-top: 0;               /* removes default space */
+  font-weight: 400;
+  opacity: 0.85;
+  font-size: 1.5rem;
+}
+#startBtn {
+  margin-top: 20px;
+  padding: 12px 36px;
+  border: none;
+  margin-right: 22px;
+  border-radius: 999px;
+  background-color: rgb(255, 105, 145);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+#startBtn:hover {
+  box-shadow: 0 5px 15px rgb(178, 56, 74);
+  transform: scale(1.05);
+}
+.ftr {
+  padding: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page_2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     
+  align-items: center;         
+  text-align: center;
+  animation: fadeUp 0.6s ease forwards;
+}
+#page_2_button{
+  background: #0000;
+  border: 2px solid #000;
+    border-radius: 25px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px 0;
+    padding: 10px 20px;
+    transition: background-color .3s ease, transform .2s ease;
+}
+#page_2_button:hover{
+  background-color: #ff9dce;
+  color:#fff;
+  transform: scale(1.05);
+}
+
+.page_2 h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.steps-list {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.steps-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: fit-content;   
+}
+
+.steps-list ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  text-align: left;       
+}
+
+.steps-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.73em;           
+  transform: translateY(-50%);
+  color: #e75480;
+  font-size: 1.4rem;
+  line-height: 1;
+}
